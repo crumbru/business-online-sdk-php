@@ -1,0 +1,4 @@
+# Superpowers подключается из repo-marketplace .agents/plugins/marketplace.json.
+# Проектная настройка применяется в trusted-проекте и свежих версиях Codex.
+[plugins."superpowers@crumb-agents"]
+enabled = true
