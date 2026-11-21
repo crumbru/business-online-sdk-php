@@ -1,4 +1,24 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugins": ["superpowers@git+https://github.com/obra/superpowers.git#v7.0.0"]
+  "plugins": [
+    "superpowers@git+https://github.com/obra/superpowers.git#v7.0.0"
+  ],
+  "references": {
+    "crm-backend-local": {
+      "path": "../crm-backend",
+      "description": "CRM-бэкенд, основной потребитель SDK. Граф — ../crm-backend/graphify-out/graph.json."
+    }
+  },
+  "mcp": {
+    "servers": {
+      "graphify": {
+        "type": "local",
+        "command": [
+          "graphify-mcp",
+          "--graph",
+          "graphify-out/graph.json"
+        ]
+      }
+    }
+  }
 }
