@@ -2,3 +2,5 @@
 /vendor/
 /src/cache/
 composer.lock
+# Граф знаний graphify (локальные артефакты)
+graphify-out/

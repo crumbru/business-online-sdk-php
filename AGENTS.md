@@ -89,3 +89,18 @@ composer validate --no-check-publish
 - Не добавлять зависимости без необходимости.
 - Не пушить в `master` напрямую.
 - Не писать документацию, задачи, тикеты, PR и коммиты на английском языке.
+
+## graphify
+
+В проекте есть граф знаний `graphify-out/graph.json` (локально, в git не попадает).
+На вопрос о коде сначала `graphify query "<вопрос>"`, а не `grep`: для связей —
+`graphify path "<A>" "<B>"`, для понятия — `graphify explain "<понятие>"`, текст раздела
+Markdown — `graphify section "<заголовок>"`. После правок кода — `graphify update .`
+(git-хук делает это после коммита и checkout).
+
+MCP в OpenCode: `graphify` — граф этого репозитория (описан в `opencode.json`),
+`graphify-global` — сводный граф машины (параметр `project_path` — любой проект).
+
+Первичная настройка проекта и машины, хуки, сводный граф и перекрёстные ссылки между
+репозиториями — в каноническом документе
+[`infra/docs/graphify.md`](https://github.com/crumbru/infra/blob/main/docs/graphify.md).
